@@ -49,9 +49,9 @@ var downloadHtmlFile = function(htmlfile) {
     rest.get(htmlfile).on('complete', function(data) {
 	//var write = fs.createWriteStream("index.html");
 	//console.log("data: " + data);
-	fs.writeFileSync("index.html", data);
+	fs.writeFileSync("downloaded-file.tmp", data);
 	//data.pipe(write);
-	doChecks("index.html");
+	doChecks("downloaded-file.tmp");
     });
 };
 
